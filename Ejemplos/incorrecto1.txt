@@ -1,0 +1,4 @@
+imprimir "Hola";
+mientras {
+    imprimir "Esto no tiene condición";
+}

@@ -1,0 +1,3 @@
+imprimir{""Hola mundo!""};
+
+imprimir{""Valor 123: correcto!""};

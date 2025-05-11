@@ -1,0 +1,8 @@
+imprimir "Hola";
+mientras verdadero {
+    imprimir "Este ciclo";
+}
+imprimir "Fin";
+mientras verdadero {
+    imprimir "Otro ciclo";
+}

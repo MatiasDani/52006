@@ -8,9 +8,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "type": "module"
+  "description": "Este proyecto es un analizador léxico y sintáctico desarrollado en JavaScript usando **ANTLR4**. Permite interpretar un lenguaje personalizado con instrucciones como `imprimir` y bucles `mientras`.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatiasDani/52006.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MatiasDani/52006/issues"
+  },
+  "homepage": "https://github.com/MatiasDani/52006#readme",
+  "dependencies": {
+    "antlr4": "^4.13.2"
+  }
 }
-
-
-

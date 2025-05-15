@@ -17,7 +17,7 @@ Antes de ejecutar el proyecto, asegúrate de tener instalado:
 ### ▶️ ¿Cómo ejecutar el analizador?
 
 1. Abre una terminal en la carpeta del proyecto.
--Arriba a la izquierda, hacé clic en: ... -> Terminal -> New Terminal.(Imagenes/image.png)
+-Arriba a la izquierda, hacé clic en: ... -> Terminal -> New Terminal.
 -Tambien podes abrir la terminal con CTRL + ñ
 
 -Se abrirá una terminal en la parte inferior de VS Code ya esta ubicada en la carpeta del proyecto.

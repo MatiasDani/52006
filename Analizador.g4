@@ -28,7 +28,7 @@ simbolo : PUNTO
         | PREGUNTA
         | DOBLE_PUNTO
         | SEMI
-        | COMILLAS COMILLA 
+        | COMILLA 
         ;
 
 //lexer

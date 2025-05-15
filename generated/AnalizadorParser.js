@@ -4,26 +4,23 @@ import antlr4 from 'antlr4';
 import AnalizadorListener from './AnalizadorListener.js';
 import AnalizadorVisitor from './AnalizadorVisitor.js';
 
-const serializedATN = [4,1,18,70,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,
+const serializedATN = [4,1,18,62,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,
 2,5,7,5,2,6,7,6,2,7,7,7,1,0,4,0,18,8,0,11,0,12,0,19,1,0,1,0,1,1,1,1,3,1,
 26,8,1,1,2,1,2,1,2,1,2,4,2,32,8,2,11,2,12,2,33,1,2,1,2,1,3,1,3,1,3,1,3,1,
 3,1,3,1,4,1,4,1,5,1,5,4,5,48,8,5,11,5,12,5,49,1,5,1,5,1,6,1,6,1,6,1,6,3,
-6,58,8,6,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,3,7,68,8,7,1,7,0,0,8,0,2,4,6,8,
-10,12,14,0,1,1,0,3,4,74,0,17,1,0,0,0,2,25,1,0,0,0,4,27,1,0,0,0,6,37,1,0,
-0,0,8,43,1,0,0,0,10,45,1,0,0,0,12,57,1,0,0,0,14,67,1,0,0,0,16,18,3,2,1,0,
-17,16,1,0,0,0,18,19,1,0,0,0,19,17,1,0,0,0,19,20,1,0,0,0,20,21,1,0,0,0,21,
-22,5,0,0,1,22,1,1,0,0,0,23,26,3,4,2,0,24,26,3,6,3,0,25,23,1,0,0,0,25,24,
-1,0,0,0,26,3,1,0,0,0,27,28,5,1,0,0,28,29,3,8,4,0,29,31,5,14,0,0,30,32,3,
-2,1,0,31,30,1,0,0,0,32,33,1,0,0,0,33,31,1,0,0,0,33,34,1,0,0,0,34,35,1,0,
-0,0,35,36,5,15,0,0,36,5,1,0,0,0,37,38,5,2,0,0,38,39,5,14,0,0,39,40,3,10,
-5,0,40,41,5,15,0,0,41,42,5,13,0,0,42,7,1,0,0,0,43,44,7,0,0,0,44,9,1,0,0,
-0,45,47,5,5,0,0,46,48,3,12,6,0,47,46,1,0,0,0,48,49,1,0,0,0,49,47,1,0,0,0,
-49,50,1,0,0,0,50,51,1,0,0,0,51,52,5,5,0,0,52,11,1,0,0,0,53,58,5,17,0,0,54,
-58,5,16,0,0,55,58,5,6,0,0,56,58,3,14,7,0,57,53,1,0,0,0,57,54,1,0,0,0,57,
-55,1,0,0,0,57,56,1,0,0,0,58,13,1,0,0,0,59,68,5,7,0,0,60,68,5,8,0,0,61,68,
-5,9,0,0,62,68,5,10,0,0,63,68,5,11,0,0,64,68,5,13,0,0,65,66,5,5,0,0,66,68,
-5,12,0,0,67,59,1,0,0,0,67,60,1,0,0,0,67,61,1,0,0,0,67,62,1,0,0,0,67,63,1,
-0,0,0,67,64,1,0,0,0,67,65,1,0,0,0,68,15,1,0,0,0,6,19,25,33,49,57,67];
+6,58,8,6,1,7,1,7,1,7,0,0,8,0,2,4,6,8,10,12,14,0,2,1,0,3,4,1,0,7,13,60,0,
+17,1,0,0,0,2,25,1,0,0,0,4,27,1,0,0,0,6,37,1,0,0,0,8,43,1,0,0,0,10,45,1,0,
+0,0,12,57,1,0,0,0,14,59,1,0,0,0,16,18,3,2,1,0,17,16,1,0,0,0,18,19,1,0,0,
+0,19,17,1,0,0,0,19,20,1,0,0,0,20,21,1,0,0,0,21,22,5,0,0,1,22,1,1,0,0,0,23,
+26,3,4,2,0,24,26,3,6,3,0,25,23,1,0,0,0,25,24,1,0,0,0,26,3,1,0,0,0,27,28,
+5,1,0,0,28,29,3,8,4,0,29,31,5,14,0,0,30,32,3,2,1,0,31,30,1,0,0,0,32,33,1,
+0,0,0,33,31,1,0,0,0,33,34,1,0,0,0,34,35,1,0,0,0,35,36,5,15,0,0,36,5,1,0,
+0,0,37,38,5,2,0,0,38,39,5,14,0,0,39,40,3,10,5,0,40,41,5,15,0,0,41,42,5,13,
+0,0,42,7,1,0,0,0,43,44,7,0,0,0,44,9,1,0,0,0,45,47,5,5,0,0,46,48,3,12,6,0,
+47,46,1,0,0,0,48,49,1,0,0,0,49,47,1,0,0,0,49,50,1,0,0,0,50,51,1,0,0,0,51,
+52,5,5,0,0,52,11,1,0,0,0,53,58,5,17,0,0,54,58,5,16,0,0,55,58,5,6,0,0,56,
+58,3,14,7,0,57,53,1,0,0,0,57,54,1,0,0,0,57,55,1,0,0,0,57,56,1,0,0,0,58,13,
+1,0,0,0,59,60,7,1,0,0,60,15,1,0,0,0,5,19,25,33,49,57];
 
 
 const atn = new antlr4.atn.ATNDeserializer().deserialize(serializedATN);
@@ -231,26 +228,21 @@ export default class AnalizadorParser extends antlr4.Parser {
 	cadena() {
 	    let localctx = new CadenaContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 10, AnalizadorParser.RULE_cadena);
+	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
 	        this.state = 45;
 	        this.match(AnalizadorParser.COMILLAS);
 	        this.state = 47; 
 	        this._errHandler.sync(this);
-	        var _alt = 1;
+	        _la = this._input.LA(1);
 	        do {
-	        	switch (_alt) {
-	        	case 1:
-	        		this.state = 46;
-	        		this.caracter();
-	        		break;
-	        	default:
-	        		throw new antlr4.error.NoViableAltException(this);
-	        	}
-	        	this.state = 49; 
-	        	this._errHandler.sync(this);
-	        	_alt = this._interp.adaptivePredict(this._input,3, this._ctx);
-	        } while ( _alt!=2 && _alt!=antlr4.atn.ATN.INVALID_ALT_NUMBER );
+	            this.state = 46;
+	            this.caracter();
+	            this.state = 49; 
+	            this._errHandler.sync(this);
+	            _la = this._input.LA(1);
+	        } while((((_la) & ~0x1f) === 0 && ((1 << _la) & 212928) !== 0));
 	        this.state = 51;
 	        this.match(AnalizadorParser.COMILLAS);
 	    } catch (re) {
@@ -291,12 +283,12 @@ export default class AnalizadorParser extends antlr4.Parser {
 	            this.state = 55;
 	            this.match(AnalizadorParser.S_COMILLAS);
 	            break;
-	        case 5:
 	        case 7:
 	        case 8:
 	        case 9:
 	        case 10:
 	        case 11:
+	        case 12:
 	        case 13:
 	            this.enterOuterAlt(localctx, 4);
 	            this.state = 56;
@@ -324,49 +316,17 @@ export default class AnalizadorParser extends antlr4.Parser {
 	simbolo() {
 	    let localctx = new SimboloContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 14, AnalizadorParser.RULE_simbolo);
+	    var _la = 0;
 	    try {
-	        this.state = 67;
-	        this._errHandler.sync(this);
-	        switch(this._input.LA(1)) {
-	        case 7:
-	            this.enterOuterAlt(localctx, 1);
-	            this.state = 59;
-	            this.match(AnalizadorParser.PUNTO);
-	            break;
-	        case 8:
-	            this.enterOuterAlt(localctx, 2);
-	            this.state = 60;
-	            this.match(AnalizadorParser.COMMA);
-	            break;
-	        case 9:
-	            this.enterOuterAlt(localctx, 3);
-	            this.state = 61;
-	            this.match(AnalizadorParser.EXCLAMACION);
-	            break;
-	        case 10:
-	            this.enterOuterAlt(localctx, 4);
-	            this.state = 62;
-	            this.match(AnalizadorParser.PREGUNTA);
-	            break;
-	        case 11:
-	            this.enterOuterAlt(localctx, 5);
-	            this.state = 63;
-	            this.match(AnalizadorParser.DOBLE_PUNTO);
-	            break;
-	        case 13:
-	            this.enterOuterAlt(localctx, 6);
-	            this.state = 64;
-	            this.match(AnalizadorParser.SEMI);
-	            break;
-	        case 5:
-	            this.enterOuterAlt(localctx, 7);
-	            this.state = 65;
-	            this.match(AnalizadorParser.COMILLAS);
-	            this.state = 66;
-	            this.match(AnalizadorParser.COMILLA);
-	            break;
-	        default:
-	            throw new antlr4.error.NoViableAltException(this);
+	        this.enterOuterAlt(localctx, 1);
+	        this.state = 59;
+	        _la = this._input.LA(1);
+	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 16256) !== 0))) {
+	        this._errHandler.recoverInline(this);
+	        }
+	        else {
+	        	this._errHandler.reportMatch(this);
+	            this.consume();
 	        }
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -840,10 +800,6 @@ class SimboloContext extends antlr4.ParserRuleContext {
 
 	SEMI() {
 	    return this.getToken(AnalizadorParser.SEMI, 0);
-	};
-
-	COMILLAS() {
-	    return this.getToken(AnalizadorParser.COMILLAS, 0);
 	};
 
 	COMILLA() {
